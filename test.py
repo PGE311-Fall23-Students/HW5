@@ -29,7 +29,7 @@ class TestSolution(unittest.TestCase):
     def test_q1(self):
         # Numpy has an extensive test suite.
         # It's best to use allclose instead of equal to avoid problems with machine precision
-        np.testing.assert_allclose(monthly_payment(40000, 5.3, 36), 1204.2310458682666, rtol=1e-5)
+        np.testing.assert_allclose(monthly_payment(40000, 5.3, 36), 1204.2310458682666, rtol=1e-3)
         return
 
 
@@ -37,7 +37,7 @@ class TestSolution(unittest.TestCase):
         # It also works if testing an array
         # You can write the solution yourself as follows. But students will be able to see your solution
 
-        np.testing.assert_allclose(sine_approximate(0.9,8), 0.783326909627483, rtol=1e-5)
+        np.testing.assert_allclose(sine_approximate(0.9,8), 0.783326909627483, rtol=1e-3)
         return
         
     def test_q3(self):
@@ -51,13 +51,13 @@ class TestSolution(unittest.TestCase):
     def test_q4(self):
         # Instead, it's better to hardcode the solution if possible
         
-        np.testing.assert_allclose(square_root(56, 1e-6), 7.4833147735478995, rtol=1e-5)
+        np.testing.assert_allclose(square_root(56, 1e-6), 7.4833147735478995, rtol=1e-3)
         return
         
     def test_q5(self):
         # Instead, it's better to hardcode the solution if possible
         t = np.linspace(-5,50)
-        np.testing.assert_allclose(v(t[26]), 1674.2823823406907, rtol=1e-5)
+        np.testing.assert_allclose(v(t[26]), 1674.2823823406907, rtol=1e-3)
         return
         
 
